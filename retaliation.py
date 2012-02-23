@@ -14,50 +14,49 @@ import usb.core
 import usb.util
 
 COMMAND_SETS = {
-        "yung": (
-          ("zero", 0),
-          ("right", 5000),
-          ("up", 3000),
-          ("fire", 1),
-          ("zero", 0)
+    "yung" : (
+        ("zero", 0),
+        ("right", 5000),
+        ("up", 3000),
+        ("fire", 1),
+        ("zero", 0),
         ),
-        "dan": (
-          ("zero", 0),
-          ("right", 4500),
-          ("up", 2500),
-          ("fire", 1),
-          ("zero", 0)
+    "dan" : (
+        ("zero", 0),
+        ("right", 4500),
+        ("up", 2500),
+        ("fire", 1),
+        ("zero", 0),
         ),
-        "aaron": (
-          ("zero", 0),
-          ("right", 3000),
-          ("up", 2500),
-          ("fire", 1),
-          ("zero", 0)
+    "aaron": (
+        ("zero", 0),
+        ("right", 3000),
+        ("up", 2500),
+        ("fire", 1),
+        ("zero", 0),
         ),
-        "jon": (
-          ("zero", 0),
-          ("right", 2000),
-          ("up", 2500),
-          ("fire", 1),
-          ("zero", 0)
+    "jon": (
+        ("zero", 0),
+        ("right", 2000),
+        ("up", 2500),
+        ("fire", 1),
+        ("zero", 0),
         ),
-        "phil": (
-          ("zero", 0),
-          ("right", 750),
-          ("up", 4000),
-          ("fire", 1),
-          ("zero", 0)
+    "phil": (
+        ("zero", 0),
+        ("right", 750),
+        ("up", 4000),
+        ("fire", 1),
+        ("zero", 0),
         ),
-        "antony": (
-          ("zero", 0),
-          ("right", 14000),
-          ("up", 4000),
-          ("fire", 1),
-          ("zero", 0)
-        ),
-        "peter": ()
-}
+    "antony": (
+        ("zero", 0),
+        ("right", 14000),
+        ("up", 4000),
+        ("fire", 1),
+        ("zero", 0),
+        )
+    }
 
 NOTIFICATION_UDP_PORT = 22222
 
@@ -142,13 +141,14 @@ def target_user(user):
         # Not efficient but our user list is probably less than 1k.
         # Do a case insenstive search for convenience.
         for key in COMMAND_SETS:
+                print "Checking against key %s" % key
                 if key.lower() == user.lower():
                         # We have a command set that targets our user so got for it!
                         run_command_set(COMMAND_SETS[key])
                         match = True
                         break
-                if not match:
-                        print "WARNING: No target command set defined for user %s" % user
+        if not match:
+            print "WARNING: No target command set defined for user %s" % user
 
 
 def wait_for_event():
