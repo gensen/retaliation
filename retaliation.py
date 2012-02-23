@@ -14,14 +14,14 @@ import usb.core
 import usb.util
 
 COMMAND_SETS = {
-        "yung" : (
+        "yung": (
           ("zero", 0),
           ("right", 5000),
           ("up", 3000),
           ("fire", 1),
           ("zero", 0)
         ),
-        "dan" : (
+        "dan": (
           ("zero", 0),
           ("right", 4500),
           ("up", 2500),
