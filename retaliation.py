@@ -65,7 +65,7 @@ def setup_usb():
         DEVICE.set_configuration()
 
 def send_cmd(cmd):
-        DEVICE.ctrl_transfer(0x21, 0x09, 0, 0, [1 << cmd])
+        DEVICE.ctrl_transfer(0x21, 0x09, 0, 0, [cmd])
 
 def send_move(cmd, duration_ms):
         send_cmd(cmd)
