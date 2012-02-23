@@ -34,6 +34,27 @@ RIGHT = 1 << 3
 FIRE = 1 << 4
 STOP = 1 << 5
 
+def usage():
+    print "Usage: retaliation.py [command] [value]"
+    print ""
+    print "   commands:"
+    print "     stalk - sit around waiting for a "
+    print "             notification, then attack the victim!"
+    print ""
+    print "     up    - move up <value> milliseconds"
+    print "     down  - move down <value> milliseconds"
+    print "     right - move right <value> milliseconds"
+    print "     left  - move left <value> milliseconds"
+    print "     fire  - fire <value> times (between 1-4)"
+    print "     zero  - park at zero position (bottom-left)"
+    print "     pause - pause <value> milliseconds"
+    print ""
+    print "     <command_set_name> - run/test a defined COMMAND_SET"
+    print "             e.g. run:"
+    print "                  retaliation.py 'chris'"
+    print "             to test targeting of chris as defined in your command set."
+    print ""
+
 def setup_usb():
         global DEVICE
         DEVICE = usb.core.find(idVendor=0x0a81, idProduct=0x0701)
