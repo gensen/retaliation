@@ -14,12 +14,48 @@ import usb.core
 import usb.util
 
 COMMAND_SETS = {
-        "kfyung" : (),
-        "dgalie" : (),
-        "adv": (),
-        "jon": (),
-        "phil": (),
-        "antony": (),
+        "yung" : (
+          ("zero", 0),
+          ("right", 5000),
+          ("up", 3000),
+          ("fire", 1),
+          ("zero", 0)
+        ),
+        "dan" : (
+          ("zero", 0),
+          ("right", 4500),
+          ("up", 2500),
+          ("fire", 1),
+          ("zero", 0)
+        ),
+        "aaron": (
+          ("zero", 0),
+          ("right", 3000),
+          ("up", 2500),
+          ("fire", 1),
+          ("zero", 0)
+        ),
+        "jon": (
+          ("zero", 0),
+          ("right", 2000),
+          ("up", 2500),
+          ("fire", 1),
+          ("zero", 0)
+        ),
+        "phil": (
+          ("zero", 0),
+          ("right", 750),
+          ("up", 4000),
+          ("fire", 1),
+          ("zero", 0)
+        ),
+        "antony": (
+          ("zero", 0),
+          ("right", 14000),
+          ("up", 4000),
+          ("fire", 1),
+          ("zero", 0)
+        ),
         "peter": ()
 }
 
